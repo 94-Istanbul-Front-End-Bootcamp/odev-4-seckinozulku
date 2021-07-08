@@ -4,14 +4,14 @@ import ReactStars from "react-rating-stars-component";
 function AddComment({ stateValue, voteHandler, commentHandler, handleAddComment }) {
     function handleClick() {
         if (stateValue.commentValue === "") {
-            alert("Lütfen yorum satırını boş bırakmayınız.")
+            alert("Lütfen yorum ekleyiniz.")
         } else if (stateValue.commentValue.length < 3) {
-            alert("Lütfen yorum yaparken üç karakterden fazla kullanınız.")
+            alert("Lütfen yorum eklerken üç veya daha fazla karakter kullanınız.")
         }
         if (stateValue.vote === 0) {
             alert("Lütfen puan veriniz (1'den 5'e kadar)")
         }
-        if (stateValue.commentValue !== "" && stateValue.vote !== 0) {
+        if (stateValue.commentValue !== "" && stateValue.vote !== 0 && stateValue.commentValue.length >= 3) {
             handleAddComment();
         }
 
