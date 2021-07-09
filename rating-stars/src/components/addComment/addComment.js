@@ -20,7 +20,7 @@ function AddComment({ stateValue, voteHandler, commentHandler, handleAddComment 
     return (
         <div>
             <h3>Yorum Ekle</h3>
-            <input value={stateValue.commentValue} onChange={(e) => commentHandler(e)}/>
+            <textarea value={stateValue.commentValue} onChange={(e) => commentHandler(e)}/>
             
             <ReactStars
                 defaultRating={0}
